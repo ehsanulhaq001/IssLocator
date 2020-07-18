@@ -9,19 +9,64 @@
     <title>Document</title>
     <script defer src="script.js"></script>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            background-color: black;
+        }
+        
+        #text {
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            color: white;
+            margin: 20px;
+        }
+        
+        h1 {
+            font-size: 60px;
+            color: rgba(255, 255, 255, 0.3);
+        }
+        
+        h1 span {
+            color: lime;
+        }
+        
+        #coor {
+            margin: 10px;
+        }
+        
+        #coor div {
+            margin: 10px;
+        }
+        
+        #coor span {
+            color: lime;
+        }
+        
         #issMap {
-            height: 200px;
+            margin: 10px;
+            height: 800px;
         }
     </style>
 </head>
 
 <body>
-    <h1>WHERE IS THE ISS ?</h1>
-    <div>
-        Latitude: <span id="lat"></span>
-    </div>
-    <div>
-        Longitude: <span id="lon"></span>
+    <div id="text">
+        <h1>WHERE IS THE <span>ISS</span> ?</h1>
+        <div id="coor">
+            <div>
+                Latitude: <span id="lat"></span>
+            </div>
+            <div>
+                Longitude: <span id="lon"></span>
+            </div>
+        </div>
     </div>
     <div id="issMap"></div>
 </body>
