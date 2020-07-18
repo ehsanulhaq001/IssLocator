@@ -45,4 +45,4 @@ async function getISS() {
 }
 
 getISS();
-setInterval(getISS, 1000 / 1);
+setInterval(getISS, 1000 / 2);
