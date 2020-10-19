@@ -10,7 +10,9 @@ const issIcon = L.icon({
     iconSize: [200, 80],
     iconAnchor: [100, 40]
 });
-let marker = L.marker([0, 0], { icon: issIcon });
+let marker = L.marker([0, 0], {
+    icon: issIcon
+});
 
 //add marker to map
 marker.addTo(issMap);
@@ -33,7 +35,10 @@ tileLayer.addTo(issMap);
 async function getISS() {
     const response = await fetch(api_url);
     const data = await response.json();
-    const { latitude, longitude } = data;
+    const {
+        latitude,
+        longitude
+    } = data;
     document.querySelector("#lat").innerHTML = Math.floor(latitude * 1000) / 1000 + 'º';
     document.querySelector("#lon").innerHTML = Math.floor(longitude * 1000) / 1000 + 'º';
 
@@ -45,4 +50,4 @@ async function getISS() {
 }
 
 getISS();
-setInterval(getISS, 1000 / 2);
+setInterval(getISS, 1000 / 1);
