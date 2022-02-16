@@ -18,7 +18,8 @@ const addTileLayerToMap = () => {
     id: `mapbox/${mapStyle ? "streets-v11" : "satellite-streets-v11"}`,
     tileSize: 512,
     zoomOffset: -1,
-    accessToken: environment.MAPBOX_ACCESS_TOKEN,
+    accessToken:
+      "pk.eyJ1IjoiZWhzYW51bGhhcSIsImEiOiJja2NydGo2dXcwZHJ4MnRvZTV5bm40NGJiIn0.PLW4ol-5wdSoulkShZt7mw",
   });
 
   //add tile layer to map
